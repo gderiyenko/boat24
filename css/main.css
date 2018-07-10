@@ -849,7 +849,7 @@ header .logo a {
 	-webkit-transition: all 0.7s ease-in-out;
 	-ms-transition: all 0.7s ease-in-out;
 	transition: all 0.7s ease-in-out;
-	font-size: small;
+	font-size: large;
 }
 .sticky {
 	position: fixed;
@@ -857,9 +857,9 @@ header .logo a {
 	top: 0;
 }
 .sticky .logo a {
-	width: 70px;
-	height: 50px;
-	background-size: 70px 50px;
+	width: 100px;
+	height: 71px;
+	background-size: 100px 80px;
 }
 
 /**
