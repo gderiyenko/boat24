@@ -15,35 +15,8 @@
 			</div>
 			
 			<div class="col-sm-9">	
-	 			<input type="text" class="form-control input-lg" value="" id="city" name="city" placeholder="City" required>
-				<span id="validcity"></span><br>
-			</div>
-			
-			<div class="col-sm-9">	
-			<select class="form-control" value="" name="klass" required>
-				<option value='7' >7 form</option>
-				<option value='8' >8 form</option>
-				<option value='9' >9 form</option>
-				<option value='10'>10 form</option>
-				<option value='11'>11 form</option>
-			</select>
-			<span id="validklass"></span><br>
-			</div>
-			
-			<div class="col-sm-9">	
-	 			<input type="text" class="form-control input-lg" value="" id="school" name="school" placeholder="School">
-				<span id="validschool"></span><br>
-			</div>
-			
-			
-			<div class="col-sm-9">	
 	 			<input type="email" class="form-control input-lg" id='email' value="" name="email" placeholder="Email" required> 
 				<span id="validemail"></span><br>
-			</div>
-			
-			<div class="col-sm-9">	
-	 			<input type="text" class="form-control input-lg" id='login' value="" name="login" placeholder="Login" required> 
-				<span id="validlogin"></span><br>
 			</div>
 			
 	 		<div class="col-sm-9">	

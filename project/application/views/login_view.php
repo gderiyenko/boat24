@@ -3,8 +3,8 @@
        	<div class="col-md-3"></div>
 		<div class="col-md-6" align="center">
         <form method="POST" action="" accept-charset="utf-8">
-	  		Login
-	  			<input type="text" class="form-control input-lg" value="" name="login">
+	  		Email
+	  			<input type="text" class="form-control input-lg" value="" name="email">
 	 		Password
 				<input type="password" class="form-control input-lg" value="" name="password">
 	

@@ -1,13 +1,13 @@
 <?php
 class Model_Login extends Model
 {
-	public function login_user($login,$pass)
+	public function login_user($email,$pass)
 	{	
 		$this->set_charset("utf8");
-		$login = $this->real_escape_string($login);
+		$email = $this->real_escape_string($email);
 		$pass = $this->real_escape_string($pass);
-		$stmt = $this->prepare('SELECT * FROM users WHERE login = ? AND password = ?');
-		$stmt->bind_param('ss', $login, $pass);
+		$stmt = $this->prepare('SELECT * FROM users WHERE email = ? AND password = ?');
+		$stmt->bind_param('ss', $email, $pass);
 
 		$stmt->execute();
 		$res = $stmt->get_result();
