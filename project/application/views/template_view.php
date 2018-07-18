@@ -5,14 +5,14 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<title>registrationTest</title>
-		<script src="/project/js/jquery-1.11.1.min.js"></script>
-		<script src="/project/js/bootstrap.min.js"></script>
-		<script src="/project/js/countdown.js" type="text/javascript"></script>
+		<title>LWG</title>
+		<script src="/lwg/project/js/jquery-1.11.1.min.js"></script>
+		<script src="/lwg/project/js/bootstrap.min.js"></script>
+		<script src="/lwg/project/js/countdown.js" type="text/javascript"></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<link href="/project/css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link rel="stylesheet" type="text/css" href="/project/css/style.css" />
+		<link href="/lwg/project/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" type="text/css" href="/lwg/project/css/style.css" />
 	</head>
 
 <div id="timer"> </div>
@@ -24,10 +24,10 @@
     </div>		
 <div id="menu">	   
 	<ul>
-		<li class="first active"><a href="/">Main page</a></li>
-		<li><a href="/project/registration">Registration</a></li>
-		<li><a href="/project/personal">Personal</a></li>
-		<li class="last"><a href="/login">Login</a></li>
+		<li class="first active"><a href="/lwg">Main page</a></li>
+		<li><a href="/lwg/project/registration">Registration</a></li>
+		<li><a href="/lwg/project/personal">Personal</a></li>
+		<li class="last"><a href="/lwg/project/login">Login</a></li>
 	</ul>
 	<br class="clearfix" />
 	</div>

@@ -6,15 +6,9 @@ class Model_Login extends Model
 		$this->set_charset("utf8");
 		$email = $this->real_escape_string($email);
 		$pass = $this->real_escape_string($pass);
-		$stmt = $this->prepare('SELECT * FROM users WHERE email = ? AND password = ?');
-		$stmt->bind_param('ss', $email, $pass);
-
-		$stmt->execute();
-		$res = $stmt->get_result();
-		
-		$res = $res->fetch_assoc();
-		$x = $res['user_id'];
-		
+		$sql = "SELECT * FROM users WHERE email = '".$email."' AND password = '".$pass."'";
+		$stmt = $this->query($sql);
+		$res = $stmt->fetch_assoc();
 		return $res;
 		
 	}

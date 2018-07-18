@@ -24,12 +24,12 @@ class Controller_Login extends Controller
 				$_SESSION['user_id']=$data['user_id'];
 				$_SESSION['lang']=$data['lang'];
 				
-				$this->model->save_logs($_SESSION['user_id'],$_COOKIE["PHPSESSID"],$_SESSION['klass']);
+				//$this->model->save_logs($_SESSION['user_id'],$_COOKIE["PHPSESSID"],$_SESSION['klass']);
 			}
 		
 		}
 		
-		if((!empty($_SESSION['user_id'])))  header ("Location: ../project/main");
+		if((!empty($_SESSION['user_id'])))  header ("Location: ../project/personal");
 			else	$this->view->generate('login_view.php', 'template_view.php');
 		
 	}
