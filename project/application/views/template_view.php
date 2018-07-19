@@ -24,10 +24,15 @@
     </div>		
 <div id="menu">	   
 	<ul>
-		<li class="first active"><a href="/lwg">Main page</a></li>
-		<li><a href="/lwg/project/registration">Registration</a></li>
-		<li><a href="/lwg/project/personal">Personal</a></li>
-		<li class="last"><a href="/lwg/project/login">Login</a></li>
+		<?php if($_SESSION['check']) {?>
+			<li class="first active"><a href="/lwg">Main page</a></li>
+			<li><a href="/lwg/project/personal">Personal</a></li>
+			<li class="last"><a href="/lwg/project/login/close">Logout</a></li>
+		<?php } else { ?>
+			<li class="first active"><a href="/lwg">Main page</a></li>
+			<li><a href="/lwg/project/login">Login</a></li>
+			<li class="last"><a href="/lwg/project/registration">Registration</a></li>
+		<?php }?>
 	</ul>
 	<br class="clearfix" />
 	</div>

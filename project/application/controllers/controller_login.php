@@ -33,6 +33,11 @@ class Controller_Login extends Controller
 			else	$this->view->generate('login_view.php', 'template_view.php');
 		
 	}
+
+	public function action_close(){
+		session_unset ();
+		header ("Location: ../login");
+	}
 	
 	
 }
