@@ -14,14 +14,14 @@
 
  	<!-- CSS
    ================================================== -->
-   <link rel="stylesheet" href="../../../css/base.css">  
-   <link rel="stylesheet" href="../../../css/main.css">
-   <link rel="stylesheet" href="../../../css/vendor.css">
+   <link rel="stylesheet" href="/lwg/css/base.css">  
+   <link rel="stylesheet" href="/lwg/css/main.css">
+   <link rel="stylesheet" href="/lwg/css/vendor.css">
    <!-- <link rel="stylesheet" href="../project/css/bootstrap.css">       -->
 
    <!-- script
    ================================================== -->
-	<script src="../../../js/modernizr.js"></script>
+	<script src="/lwg/js/modernizr.js"></script>
 
    <!-- favicons
 	================================================== -->
@@ -39,13 +39,13 @@
 			<div id="main-nav-wrap" style="position: unset;">
 				<ul class="main-navigation" style="padding: 0 0 0 80%;">
 					<?php if(!empty($_SESSION['check'])) {?>
-						<li class="first active"><a href="/">Main page</a></li>
-						<li><a href="/project/personal">Personal</a></li>
-						<li class="last"><a href="/project/login/close">Logout</a></li>
+						<li class="first active"><a href="/lwg">Main page</a></li>
+						<li><a href="/lwg/project/personal">Personal</a></li>
+						<li class="last"><a href="/lwg/project/login/close">Logout</a></li>
 					<?php } else { ?>
-						<li class="first active"><a href="/">Main page</a></li>
-						<li><a href="/project/login">Login</a></li>
-						<li class="last"><a href="/project/registration">Registration</a></li>
+						<li class="first active"><a href="/lwg">Main page</a></li>
+						<li><a href="/lwg/project/login">Login</a></li>
+						<li class="last"><a href="/lwg/project/registration">Registration</a></li>
 					<?php }?>
 				</ul>
 			</div>

@@ -1,5 +1,11 @@
 <?php
+
 session_start();
+if (!empty($_SESSION['check'])){
+	$liitu = true;
+} else {
+	$liitu = false;
+}
 ?>
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
@@ -59,16 +65,16 @@ session_start();
 				  <li><a class="smoothscroll"  href="#features" title="">Teenused</a></li>
 					<li><a class="smoothscroll"  href="#pricing" title="">Pricing</a></li>
 					<li><a class="smoothscroll"  href="#faq" title="">KKK</a></li>
-					<?php if(!empty($_SESSION['check'])) {?>
+					<?php if ($liitu) { ?>
 					   <li class="highlight with-sep"><a href="#" title=""><?php echo $_SESSION['fname'];?></a>
 					   <ul class="submenu">
-                         <li><a href=/project/personal>Personal Data</a></li>
-                         <li><a href=#>Change Password</a></li>
-                         <li><a href=/project/login/close>Log Out</a></li>
+                         <li><a href="/lwg/project/personal">Personal Data</a></li>
+                         <li><a href="#">Change Password</a></li>
+                         <li><a href="/lwg/project/login/close">Log Out</a></li>
                         </ul>
 					   </li>
 					<?php } else { ?>
-					<li class="highlight with-sep"><a href="/project/login" title="">Liitu</a></li>	
+						<li class="highlight with-sep"><a href="/lwg/project/registration" title="">Liitu</a></li>	
 					<?php }?>
 					<!--
 				    <li class="highlight with-sep"><a href="rus.html" title=""><img class="flag" src="images/rus.png" alt="est"></a></li>

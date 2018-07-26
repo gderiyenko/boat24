@@ -29,7 +29,7 @@ class Controller_Login extends Controller
 		
 		}
 		
-		if((!empty($_SESSION['user_id'])))  header ("Location: ../project/personal");
+		if((!empty($_SESSION['user_id'])))  header ("Location: /lwg");
 			else	$this->view->generate('login_view.php', 'template_view.php');
 		
 	}
