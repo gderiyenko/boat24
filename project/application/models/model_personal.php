@@ -3,7 +3,7 @@ class Model_Personal extends Model
 {
 	public function get_user_data($id) {
 		$this->set_charset("utf8");
-	$res = $this->query("SELECT * FROM `users` WHERE  `user_id`='$id' ");
+		$res = $this->query("SELECT * FROM `users` WHERE  `user_id`='$id' ");
 		$res = $res->fetch_assoc();
 		return $res;
 	}

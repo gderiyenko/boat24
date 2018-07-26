@@ -15,10 +15,8 @@ class Controller_Login extends Controller
 		{
 			$data = $this->model->login_user($_POST['email'],$_POST['password']);
 			
-			if(!empty($data)) 
-				{
+			if (!empty($data)) {
 				$_SESSION['check']=true;
-			//	$_SESSION['check']=$data['payment'];
 				$_SESSION['fname']=$data['fname'];
 				$_SESSION['lname']=$data['lname'];
 				$_SESSION['user_id']=$data['user_id'];

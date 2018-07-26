@@ -69,7 +69,7 @@ if (!empty($_SESSION['check'])){
 					   <li class="highlight with-sep"><a href="#" title=""><?php echo $_SESSION['fname'];?></a>
 					   <ul class="submenu">
                          <li><a href="/lwg/project/personal">Personal Data</a></li>
-                         <li><a href="#">Change Password</a></li>
+                         <li><a href="/lwg/project/change">Change Password</a></li>
                          <li><a href="/lwg/project/login/close">Log Out</a></li>
                         </ul>
 					   </li>

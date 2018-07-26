@@ -34,9 +34,12 @@ class Controller_Registration extends Controller
 
 		} else {
 			$this->model->registration_user($_POST['fname'],$_POST['lname'],$_POST['lang'],$_POST['email'],$_POST['password']);
-			//$this->send_admin_mail($_POST['fname'],$_POST['lname'],$_POST['school'],$_POST['city'],$_POST['klass']);
-			//$this->send_mail($_POST['fname'],$_POST['lname'],$_POST['email']);
-			header ("Location: ../login");
+			$_SESSION['check']=true;
+			$_SESSION['fname']=$data['fname'];
+			$_SESSION['lname']=$data['lname'];
+			$_SESSION['user_id']=$data['user_id'];
+			$_SESSION['lang']=$data['lang'];
+			header ("Location: /lwg");
 
 		}
 	}
