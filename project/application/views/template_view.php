@@ -1,43 +1,58 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8">
-		<meta name="google" value="notranslate" />
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<title>LWG</title>
-		<script src="/lwg/project/js/jquery-1.11.1.min.js"></script>
-		<script src="/lwg/project/js/bootstrap.min.js"></script>
-		<script src="/lwg/project/js/countdown.js" type="text/javascript"></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<link href="/lwg/project/css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link rel="stylesheet" type="text/css" href="/lwg/project/css/style.css" />
-	</head>
+<head>
 
-<div id="timer"> </div>
-	
-<!--	<body oncopy="return false;" >-->
-		<div id="wrapper">
-			<div id="header">
-		 <div class="image">
-    </div>		
-<div id="menu">	   
-	<ul>
-		<?php if($_SESSION['check']) {?>
-			<li class="first active"><a href="/lwg">Main page</a></li>
-			<li><a href="/lwg/project/personal">Personal</a></li>
-			<li class="last"><a href="/lwg/project/login/close">Logout</a></li>
-		<?php } else { ?>
-			<li class="first active"><a href="/lwg">Main page</a></li>
-			<li><a href="/lwg/project/login">Login</a></li>
-			<li class="last"><a href="/lwg/project/registration">Registration</a></li>
-		<?php }?>
-	</ul>
-	<br class="clearfix" />
-	</div>
-		</div>
-		<div id="page">
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>LWG</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="../../../css/base.css">  
+   <link rel="stylesheet" href="../../../css/main.css">
+   <link rel="stylesheet" href="../../../css/vendor.css">     
+
+   <!-- script
+   ================================================== -->
+	<script src="../../../js/modernizr.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<style type="text/css">
+		body,td,th {
+			font-size: 1em;
+		}
+    </style>
+</head>
+<body>
+	<div style="background-image: url(/images/intro-bg.jpg);
+	    background-repeat: no-repeat;
+	    width: auto;
+	    height: auto;">
+		  
+		<nav style="background: #14171c; width: 100%; height: 70px">
+			<div id="main-nav-wrap" style="position: unset;">
+				<ul class="main-navigation" style="padding: 0 0 0 80%;">
+					<?php if(!empty($_SESSION['check'])) {?>
+						<li class="first active"><a href="/">Main page</a></li>
+						<li><a href="/project/personal">Personal</a></li>
+						<li class="last"><a href="/project/login/close">Logout</a></li>
+					<?php } else { ?>
+						<li class="first active"><a href="/">Main page</a></li>
+						<li><a href="/project/login">Login</a></li>
+						<li class="last"><a href="/project/registration">Registration</a></li>
+					<?php }?>
+				</ul>
+			</div>
+		</nav>
+		<br class="clearfix"/>
 			<div id="content">
 				<div class="box">
 					<?php include 'application/views/'.$content_view; ?>
@@ -45,7 +60,6 @@
 				<br class="clearfix" />
 			</div>
 			<br class="clearfix" />
-		</div>
 	</div>
 </body>
 </html>
