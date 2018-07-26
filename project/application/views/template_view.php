@@ -16,7 +16,8 @@
    ================================================== -->
    <link rel="stylesheet" href="../../../css/base.css">  
    <link rel="stylesheet" href="../../../css/main.css">
-   <link rel="stylesheet" href="../../../css/vendor.css">     
+   <link rel="stylesheet" href="../../../css/vendor.css">
+   <!-- <link rel="stylesheet" href="../project/css/bootstrap.css">       -->
 
    <!-- script
    ================================================== -->
@@ -32,10 +33,7 @@
     </style>
 </head>
 <body>
-	<div style="background-image: url(/images/intro-bg.jpg);
-	    background-repeat: no-repeat;
-	    width: auto;
-	    height: auto;">
+	<div >
 		  
 		<nav style="background: #14171c; width: 100%; height: 70px">
 			<div id="main-nav-wrap" style="position: unset;">

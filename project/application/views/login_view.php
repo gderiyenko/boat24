@@ -1,19 +1,13 @@
-<body style="background-color:#EDEDED">
-    <div class="modal-header" align="center"> <h2>Login Page</h2> </div>
-       	<div class="col-md-3"></div>
-		<div class="col-md-6" align="center">
-        <form method="POST" action="" accept-charset="utf-8">
-	  		Email
-	  			<input type="text" class="form-control input-lg" value="" name="email">
-	 		Password
-				<input type="password" class="form-control input-lg" value="" name="password">
-	
-        <div> <br />
-		<button type="submit" class="btn btn-primary" >Login</button>
-		<a type="button" class="btn btn-default" href="registration">Registration</a>
-		
-       
-		</div>
+<body class="loginPage">
+    <div class="modal-header" align="center"> <h2 style="color: #05bca9;">Login Form</h2></div>
+		<div class="col-md-6 col-sm-9"  align="center" style="width: 100%;">
+        <form method="POST" action="" accept-charset="utf-8" >
+	 		<input type="text" class="form-control input-lg" value="" name="email" placeholder="Login">
+	 		<input type="password" class="form-control input-lg" value="" name="password" placeholder="Password">
+        	<div> 
+				<button type="submit" class="btn btn-primary" >Login</button>
+				<a type="button" class="btn btn-default" href="registration">Registration</a>   
+			</div>
 		</form>
     </div>
 </body>

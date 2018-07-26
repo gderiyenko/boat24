@@ -17,15 +17,15 @@ class Route
 		$routes = explode('/', $_SERVER['REQUEST_URI']);
 
 		// получаем имя контроллера
-		if ( !empty($routes[3]) )
+		if ( !empty($routes[2]) )
 		{	
-			$controller_name = $routes[3];
+			$controller_name = $routes[2];
 		}
 		
 		// получаем имя экшена
-		if ( !empty($routes[4]) )
+		if ( !empty($routes[3]) )
 		{
-			$action_name = $routes[4];
+			$action_name = $routes[3];
 		}
 
 		// добавляем префиксы

@@ -1,3 +1,4 @@
+<body class="loginPage">
 <style>
 	.col-sm-9 {
 	    margin: auto;
@@ -53,4 +54,4 @@
 		</form>
 		
 	</div>
-	
+</body>	
