@@ -23,8 +23,9 @@ class Controller_Change extends Controller
 	{
 		if ($_POST['newPassword'] == $_POST['newPasswordRepeat']) {
 			$success = $this->model->save_user_data($_POST['oldPassword'], $_POST['newPassword'], $_SESSION['user_id']);
-			if ($success){
-				header ("Location: /lwg");
+			if ($success) {
+				$_SESSION['message'] = "OK";
+				header ("Location: /lwg/project/change");
 				die();
 			}
 		}
