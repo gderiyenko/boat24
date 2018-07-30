@@ -1,7 +1,7 @@
 <?php
 class Model_Registration extends Model
 {
-	public function registration_user($fname,$lname,$lang,$email,$password)
+	public function registration_user($fname,$lname,$lang,$email,$password,$nameCV)
 	{
 		$this->set_charset("utf8");
 		$fname = $this->real_escape_string($fname);
@@ -9,8 +9,8 @@ class Model_Registration extends Model
 		$lang = $this->real_escape_string($lang);
 		$password = $this->real_escape_string($password);
 
-		$this->query("INSERT INTO `users` (`fname`,`lname`,`lang`,`email`,`password`,`date`) 
-			VALUES ('$fname','$lname','$lang','$email','$password',now())");
+		$this->query("INSERT INTO `users` (`fname`,`lname`,`lang`,`email`,`password`,`date`, `filename_CV`) 
+			VALUES ('$fname','$lname','$lang','$email','$password',now(),'$nameCV')");
 
 	}
 	

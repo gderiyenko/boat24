@@ -10,10 +10,15 @@
 	}
 </style>
 
-<h3><i><font color='red'><?php if(!empty($_SESSION['data'])) echo $_SESSION['data']; ?></font> </i></h3>  
+<h3><i><font color='red'>
+	<?php if(!empty($_SESSION['data'])) {
+		echo $_SESSION['data'];
+		$_SESSION['data'] = null;
+	} ?></font> </i></h3>  
+	
 <div class="modal-header" align="center"> <h2 style="color: #05bca9;">Registration Form</h2> </div>
 		<div class="col-md-6" align="left" style="margin: 1% 0 0 0">
-        <form class="form-horizontal" method="POST" action="registration/check" accept-charset="utf-8">
+        <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="registration/check" accept-charset="utf-8">
 	  		
 			<div class="col-sm-9">
 	  			<input type="text" class="form-control input-lg" value="" id="name" name="fname" placeholder="Name" required>
@@ -43,7 +48,7 @@
 
 			<div class="col-sm-9">
 				<label>Add CV</label>
-	 			<input type="file" placeholder="Add CV" id="fileToUpload">
+				<input type="file" placeholder="Add CV" name="file" size="50" id="fileToUpload"/>
 	 			<span id="validCV"></span><br>
 	 		</div>	
 			<div class="col-sm-9">	
