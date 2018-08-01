@@ -1,3 +1,13 @@
+<?php
+
+  session_start();
+  if (!empty($_SESSION['check'])){
+    $liitu = true;
+  } else {
+    $liitu = false;
+  }
+
+?>
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
@@ -34,32 +44,56 @@
 }
     </style>
 </head>
+<script type="text/javascript">
+   function showSubmenu() {
+      //alert(document.getElementById('submenu').style.display);
+      if (document.getElementById('submenu').style.display == "none"){
+         document.getElementById("submenu").style.display = "block";
+      } else {
+         document.getElementById("submenu").style.display = "none";
+      }
+   }
+</script>
 
 <body id="top">
 
   <!-- header 
    ================================================== -->
    <header>
-
+      <div class="logo">
+         <a href="#intro">LWG</a>
+      </div>
     <div class="row">
 
-      <div class="logo">
-           <a href="index.html">LWG</a>
-        </div>
-
       <nav id="main-nav-wrap">
-        <ul class="main-navigation">
-          <li class="current"><a class="smoothscroll"  href="#intro" title="">Kodu</a></li>
-          <li><a class="smoothscroll"  href="#process" title="">Meist</a></li>
-          <li><a class="smoothscroll"  href="#features" title="">Teenused</a></li>
-          <li><a class="smoothscroll"  href="#pricing" title="">Pricing</a></li>
-          <li><a class="smoothscroll"  href="#faq" title="">KKK</a></li>          
-          <li class="highlight with-sep"><a href="#" title="">Liitu</a></li>          
+        <ul class="main-navigation menu">
+          <li class="current"><a href="/lwg/#intro" title="">Kodu</a></li>
+          <li><a href="/lwg/#process" title="">Meist</a></li>
+          <li><a href="/lwg/#features" title="">Teenused</a></li>
+          <li><a href="/lwg/#pricing" title="">Pricing</a></li>
+          <li><a href="/lwg/#faq" title="">Main</a></li>
+          <?php if ($liitu) { ?>
+             <li class="highlight with-sep" onclick ="showSubmenu()" style="margin: 0 10px; cursor: pointer;">
+                     <div  style="color: #05bca9; width: 100%">
+                        <?php echo $_SESSION['fname'];?>
+                     </div>
+               <ul id="submenu" class="submenu" style="display: none;">
+                         <li><a href="/lwg/project/personal">Personal Data</a></li>
+                         <li><a href="/lwg/project/change">Change Password</a></li>
+                         <li><a href="/lwg/project/login/close">Log Out</a></li>
+                     </ul>
+             </li>
+          <?php } else { ?>
+            <li class="highlight with-sep"><a href="/lwg/project/registration" title="">Liitu</a></li>  
+          <?php }?>
+          <!--
+            <li class="highlight with-sep"><a href="rus.html" title=""><img class="flag" src="images/rus.png" alt="est"></a></li>
+          <li><a class="smoothscroll"  href="index.html" title=""><img class="flag" src="images/est.png" alt="est"></a></li>          
+          <li class="smoothscroll"><a href="eng.html" title=""><img class="flag" src="images/uk.png" alt="est"></a></li>
+          -->       
         </ul>
       </nav>
-
       <a class="menu-toggle" href="#"><span>Menu</span></a>
-      
     </div>    
     
    </header> <!-- /header -->
@@ -82,7 +116,7 @@
         <h3>Contact Form</h3>
 
 
-        <div class="container">  
+        <div class="container" style="left: 0;">  
   <form id="contact" action="contact_mail.php" method="post">
     <h3>Quick Contact</h3>
     <h4>Contact us today, and get reply with in 24 hours!</h4>
@@ -190,9 +224,17 @@
 
           <div class="col-four tab-full mob-full footer-info">            
 
-              <div class="footer-logo"></div>
+              <!--<div class="footer-logo"></div> -->
+                  <img src="images/logo.png" style="width: 70px;display:inline-block">
+                  <p style="
+                     position: relative;
+                     bottom: 18px;
+                     color: white;
+                     display:inline-block;">Live Ware Group</p>
 
-              <p>
+              <p style="
+                     position: relative;
+                     bottom: 18px;">
               Pikk 39-8<br>
               Tallinn, Estonia<br>
               info@lwg.ee &nbsp; +123-456-789
@@ -205,9 +247,9 @@
             <h4>Lehe lingid</h4>
 
             <ul>
-              <li><a href="#">Meist</a></li>
+              <li><a class="smoothscroll" href="#process">Meist</a></li>
             
-            <li><a href="#">KKK</a></li>
+            <li><a class="smoothscroll" href="#faq">KKK</a></li>
             
             
           </ul>
@@ -229,25 +271,10 @@
           </div> <!-- /social --> 
 
           <div class="col-four tab-1-3 mob-full footer-subscribe">
-
-            <h4>Subscribe</h4>
-
-            <p>Keep yourself updated. Subscribe to our newsletter.</p>
-
-            <div class="subscribe-form">
-          
-              <form id="mc-form" class="group" novalidate>
-
-              <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="sisesta E-mail ja vajuta enter" required=""> 
-        
-              <input type="submit" name="subscribe" >
-        
-              <label for="mc-email" class="subscribe-message"></label>
-      
-            </form>
-
-            </div>            
-                      
+            <h4>Kontakteeru täna</h4>
+            <div class="action">
+                  <a class="button large round" style="background: #434343; pointer-events: none; cursor: default;"  href="test.php" >Kontakteeru kohe</a>
+               </div>        
           </div> <!-- /subscribe -->         
 
         </div> <!-- /row -->
@@ -275,7 +302,7 @@
 
       </div>
 
-   </footer>  
+   </footer> 
 
    <div id="preloader"> 
       <div id="loader"></div>

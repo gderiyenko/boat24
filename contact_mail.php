@@ -4,5 +4,5 @@
 	$phone = htmlspecialchars($_POST['phone']);
 	$message = htmlspecialchars($_POST['message']);
 	mail ("test@lwg.ee", $email, "Name: ".$name."\r\n"."Email: ".$email."\r\n"."Phone: ".$phone."\r\n".$message);
-	header('Location: index.html');
+	header('Location: index.php');
 ?>

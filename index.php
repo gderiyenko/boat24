@@ -1,11 +1,12 @@
 <?php
 
-session_start();
-if (!empty($_SESSION['check'])){
-	$liitu = true;
-} else {
-	$liitu = false;
-}
+   session_start();
+   if (!empty($_SESSION['check'])){
+   	$liitu = true;
+   } else {
+   	$liitu = false;
+   }
+
 ?>
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
@@ -115,7 +116,7 @@ if (!empty($_SESSION['check'])){
 	   		</div>  
 
             <div class="action">
-               <a class="button large round" style="background: #fff; color:#05bca9;"  href="test.html">Kontakteeru kohe</a>
+               <a class="button large round" style="background: #fff; color:#05bca9;"  href="test.php">Kontakteeru kohe</a>
             </div>
    		</div>
    	</div>
@@ -494,14 +495,14 @@ Seega jääb teil rohkem aega oma põhitegevuseks.
 
 		     	<div class="ad-content">
 
-		     		<h2 class="h01"><a href="test.html">Kui oled otsustanud.</a></h2>
+		     		<h2 class="h01"><a href="test.php">Kui oled otsustanud.</a></h2>
 
 			      <p class="lead">
 			     Kas teil on probleem tööjõu leidmisega? Tule ja proovi LWG töötotsimise teenuseid 				
 					</p>
 
 					<div class="action">
-			         <a class="button large round" href="test.html">Kontakteeru täna </a>
+			         <a class="button large round" href="test.php">Kontakteeru täna </a>
 		        	</div>
 
 		     	</div>			      
@@ -607,7 +608,7 @@ Seega jääb teil rohkem aega oma põhitegevuseks.
 	      	<div class="col-four tab-1-3 mob-full footer-subscribe">
 	      		<h4>Kontakteeru täna</h4>
 	      		<div class="action">
-                  <a class="button large round" style="background: #434343;"  href="test.html">Kontakteeru kohe</a>
+                  <a class="button large round" style="background: #434343;"  href="test.php">Kontakteeru kohe</a>
                </div>   	   
 	      	</div> <!-- /subscribe -->         
 
