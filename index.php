@@ -60,12 +60,10 @@ if (!empty($_SESSION['check'])){
 	<!-- header 
    ================================================== -->
    <header>
-
+      <div class="logo">
+         <a href="#intro">LWG</a>
+      </div>
    	<div class="row">
-
-   		<div class="logo">
-	         <a href="index.html">LWG</a>
-	      </div>
 
 	   	<nav id="main-nav-wrap">
 				<ul class="main-navigation menu">
@@ -95,9 +93,7 @@ if (!empty($_SESSION['check'])){
 					-->				
 				</ul>
 			</nav>
-
 			<a class="menu-toggle" href="#"><span>Menu</span></a>
-   		
    	</div>   	
    	
    </header> <!-- /header -->
@@ -562,9 +558,17 @@ Seega jääb teil rohkem aega oma põhitegevuseks.
 
 	      	<div class="col-four tab-full mob-full footer-info">            
 
-	            <div class="footer-logo"></div>
+	            <!--<div class="footer-logo"></div> -->
+                  <img src="images/logo.png" style="width: 70px;display:inline-block">
+                  <p style="
+                     position: relative;
+                     bottom: 18px;
+                     color: white;
+                     display:inline-block;">Live Ware Group</p>
 
-	            <p>
+	            <p style="
+                     position: relative;
+                     bottom: 18px;">
 		        	Pikk 39-8<br>
             	Tallinn, Estonia<br>
 		        	info@lwg.ee &nbsp; +123-456-789
