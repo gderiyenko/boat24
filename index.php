@@ -115,9 +115,7 @@
 	   			<h1>Otsid Personali?<br>Meie aitame Sind</h1>
 	   		</div>  
 
-            <div class="action">
-               <a class="button large round" style="background: #fff; color:#05bca9;"  href="test.php">Kontakteeru kohe</a>
-            </div>
+            <a class="button stroke smoothscroll" style="background: #05bca9; color:#05bca9;" href="test.php" title="">Kontakteeru kohe</a>
    		</div>
    	</div>
 
@@ -489,28 +487,6 @@ Seega jääb teil rohkem aega oma põhitegevuseks.
    		
    	</div> <!-- /faq-content --> 
 
-   	<div class="row section-ads">
-
-		   <div class="col-twelve">	
-
-		     	<div class="ad-content">
-
-		     		<h2 class="h01"><a href="test.php">Kui oled otsustanud.</a></h2>
-
-			      <p class="lead">
-			     Kas teil on probleem tööjõu leidmisega? Tule ja proovi LWG töötotsimise teenuseid 				
-					</p>
-
-					<div class="action">
-			         <a class="button large round" href="test.php">Kontakteeru täna </a>
-		        	</div>
-
-		     	</div>			      
-
-			</div>
-
-		</div> <!-- /section-ads --> 
-
 
    </section> <!-- /faq --> 
 
@@ -551,19 +527,23 @@ Seega jääb teil rohkem aega oma põhitegevuseks.
 
    <!-- footer
    ================================================== -->
+
+
    <footer>
 
    	<div class="footer-main">
+         <img src="images/logo.png" style="width: 5%;
+          margin: 1% 0 9% 5%;
+          display: inline-block;"> 
+   		<div class="row" style="display: inline-block;">  
 
-   		<div class="row">  
+	      	<div class="col-four tab-full mob-full footer-info" style="padding: 0 0;">            
 
-	      	<div class="col-four tab-full mob-full footer-info">            
-
-	            <!--<div class="footer-logo"></div> -->
-                  <img src="images/logo.png" style="width: 70px;display:inline-block">
+	            <!--<div class="footer-logo"></div>-->
+                  
+                  <span class='icon'></span>
                   <p style="
                      position: relative;
-                     bottom: 18px;
                      color: white;
                      display:inline-block;">Live Ware Group</p>
 
@@ -607,9 +587,9 @@ Seega jääb teil rohkem aega oma põhitegevuseks.
 
 	      	<div class="col-four tab-1-3 mob-full footer-subscribe">
 	      		<h4>Kontakteeru täna</h4>
-	      		<div class="action">
-                  <a class="button large round" style="background: #434343;"  href="test.php">Kontakteeru kohe</a>
-               </div>   	   
+               <ul>
+	      		   <li><a href="test.php">Kontakteeru kohe</a></li>
+               </ul>
 	      	</div> <!-- /subscribe -->         
 
 	      </div> <!-- /row -->

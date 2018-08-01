@@ -71,7 +71,6 @@
           <li><a href="/lwg/#process" title="">Meist</a></li>
           <li><a href="/lwg/#features" title="">Teenused</a></li>
           <li><a href="/lwg/#pricing" title="">Pricing</a></li>
-          <li><a href="/lwg/#faq" title="">Main</a></li>
           <?php if ($liitu) { ?>
              <li class="highlight with-sep" onclick ="showSubmenu()" style="margin: 0 10px; cursor: pointer;">
                      <div  style="color: #05bca9; width: 100%">
