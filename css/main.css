@@ -976,6 +976,7 @@ a.menu-toggle {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+
 .main-navigation li.highlight a {
 	color: #05bca9;
 }

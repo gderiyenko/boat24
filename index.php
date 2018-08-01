@@ -43,7 +43,16 @@ if (!empty($_SESSION['check'])){
 }
     </style>
 </head>
-
+<script type="text/javascript">
+   function showSubmenu() {
+      //alert(document.getElementById('submenu').style.display);
+      if (document.getElementById('submenu').style.display == "none"){
+         document.getElementById("submenu").style.display = "block";
+      } else {
+         document.getElementById("submenu").style.display = "none";
+      }
+   }
+</script>
 <body id="top">
 
 
@@ -66,12 +75,15 @@ if (!empty($_SESSION['check'])){
 					<li><a class="smoothscroll"  href="#pricing" title="">Pricing</a></li>
 					<li><a class="smoothscroll"  href="#faq" title="">KKK</a></li>
 					<?php if ($liitu) { ?>
-					   <li class="highlight with-sep"><a href="#" title=""><?php echo $_SESSION['fname'];?></a>
-					   <ul class="submenu">
+					   <li class="highlight with-sep" onclick ="showSubmenu()" style="margin: 0 10px; cursor: pointer;">
+                     <div  style="color: #05bca9; width: 100%">
+                        <?php echo $_SESSION['fname'];?>
+                     </div>
+   					   <ul id="submenu" class="submenu" style="display: none;">
                          <li><a href="/lwg/project/personal">Personal Data</a></li>
                          <li><a href="/lwg/project/change">Change Password</a></li>
                          <li><a href="/lwg/project/login/close">Log Out</a></li>
-                        </ul>
+                     </ul>
 					   </li>
 					<?php } else { ?>
 						<li class="highlight with-sep"><a href="/lwg/project/registration" title="">Liitu</a></li>	
@@ -98,22 +110,19 @@ if (!empty($_SESSION['check'])){
 
    	<div class="intro-content">
    		<div class="row">
-
    			<div class="col-twelve">
-
 	   			<!-- <div class='video-link'> 
 	   				<a href="#video-popup"><img src="images/play-button.png" alt=""></a>
 	   			</div>-->
-
 	   			<h5>Teretulemast  LWG .</h5>
 	   			<h1>Otsid Personali?<br>Meie aitame Sind</h1>
-
-	   			<a class="button stroke smoothscroll" href="#process" title="">Uuri lÄhemalt</a>
-
 	   		</div>  
-   			
-   		</div>   		 		
-   	</div> 
+
+            <div class="action">
+               <a class="button large round" style="background: #fff; color:#05bca9;"  href="test.html">Kontakteeru kohe</a>
+            </div>
+   		</div>
+   	</div>
 
    	<!-- Modal Popup
 	   ========================================================= -->
@@ -592,18 +601,10 @@ Seega jääb teil rohkem aega oma põhitegevuseks.
 	      	</div> <!-- /social --> 
 
 	      	<div class="col-four tab-1-3 mob-full footer-subscribe">
-
-	      		<h4>Subscribe</h4>
-
-	      		<p>Keep yourself updated. Subscribe to our newsletter.</p>
-
-	      		<div class="subscribe-form">
-	      			<form action="https://boat24.us18.list-manage.com/subscribe/post?u=85d226b4423794c63b5dd5fb7&amp;id=513b15116d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						<input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="sisesta E-mail ja vajuta enter" required=""> 
-		   				<label for="mc-email" class="subscribe-message"></label>
-					</form>
-	      		</div>	   	      		
-	      	           	
+	      		<h4>Kontakteeru täna</h4>
+	      		<div class="action">
+                  <a class="button large round" style="background: #434343;"  href="test.html">Kontakteeru kohe</a>
+               </div>   	   
 	      	</div> <!-- /subscribe -->         
 
 	      </div> <!-- /row -->
