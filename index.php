@@ -64,7 +64,9 @@
       <div class="logo">
          <a href="#intro">LWG</a>
       </div>
-   	<div class="row">
+   	<div class="row" style="    width: 80%;
+     max-width: auto; 
+    margin: 0 0 0 13%;">
 
 	   	<nav id="main-nav-wrap">
 				<ul class="main-navigation menu">
@@ -78,12 +80,13 @@
                      <div  style="color: #05bca9; width: 100%">
                         <?php echo $_SESSION['fname'];?>
                      </div>
-   					   <ul id="submenu" class="submenu" style="display: none;">
-                         <li><a href="/lwg/project/personal">Personal Data</a></li>
-                         <li><a href="/lwg/project/change">Change Password</a></li>
-                         <li><a href="/lwg/project/login/close">Log Out</a></li>
+                  </li>
+   					   <ul id="submenu" class="submenu" style="display:none;margin: 66px 0 0 0;position:fixed;top:0;right:0;left:auto;padding: 0 1% 0 0;">
+                         <li style="height: auto;"><a href="/lwg/project/personal">Personal Data</a></li>
+                         <li style="height: auto;"><a href="/lwg/project/change">Change Password</a></li>
+                         <li style="height: auto;"><a href="/lwg/project/login/close">Log Out</a></li>
                      </ul>
-					   </li>
+					   
 					<?php } else { ?>
 						<li class="highlight with-sep"><a href="/lwg/project/registration" title="">Liitu</a></li>	
 					<?php }?>
