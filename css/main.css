@@ -269,6 +269,13 @@ hr {
 	height: 0;
 }
 
+.username {
+	color: #05bca9; width: 100%
+}
+.username:hover {
+	color: white;
+}
+
 /**
  * Lists  
  * -
@@ -1249,8 +1256,8 @@ a.menu-toggle {
 	outline: none;
 }
 .intro-content .button {
-	border-color: #FFFFFF;
-	color: #FFFFFF;
+	border-color: #05bca9;
+	color: #05bca9;
 	height: 6.6rem;
 	line-height: 6rem;
 	padding: 0 3rem !important;
@@ -1261,8 +1268,8 @@ a.menu-toggle {
 	letter-spacing: .4rem;
 }
 .intro-content .button:hover, .intro-content .button:focus {
-	color: #05bca9;
-	border-color: #05bca9;
+	color: white;
+	border-color: white;
 }
 
 /**

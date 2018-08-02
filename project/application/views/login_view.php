@@ -16,7 +16,7 @@ input {
 	width: 100%;
 }
 </style>
-<body class="loginPage">
+<div class="loginPage">
 
     <div class="modal-header" align="center">
     	<h2 style="color: #05bca9;">Login Form</h2>
@@ -35,4 +35,4 @@ input {
 		</form>
     </div>
 
-</body>
+</div>

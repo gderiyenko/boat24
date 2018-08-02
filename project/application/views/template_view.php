@@ -30,34 +30,36 @@
 		body,td,th {
 			font-size: 1em;
 		}
+
+		.main-navigation li a {
+			font-family: "raleway-heavy", sans-serif;
+			color: #98999a;
+			font-size: 11.5px;
+		    text-transform: uppercase;
+		    letter-spacing: 1.5px;
+		    position: absolute;
+		    top: 0;
+		    right: 30px;
+		}
+		.loginPage {
+			padding-top: 10%;
+		}
     </style>
 </head>
 <body>
-	<div >
 		  
-		<nav style="background: #14171c; width: 100%; height: 70px">
-			<div id="main-nav-wrap" style="position: unset;">
-				<ul class="main-navigation" style="padding: 0 0 0 80%;">
+		<nav style="background: #14171c; width: 100%; height: 70px; position: fixed;">
+				<ul class="main-navigation" style="padding: 0 0 0 72%; width: 100%;">
 					<?php if(!empty($_SESSION['check'])) {?>
-						<li class="first active"><a href="/lwg">Main page</a></li>
-						<li><a href="/lwg/project/personal">Personal</a></li>
-						<li class="last"><a href="/lwg/project/login/close">Logout</a></li>
+						<li style="width: 32%"><a href="/lwg">Main page</a></li>
+						<li style="width: 32%"><a href="/lwg/project/personal">Personal</a></li>
+						<li style="width: 32%"><a href="/lwg/project/login/close">Logout</a></li>
 					<?php } else { ?>
 						<li class="first active"><a href="/lwg">Main page</a></li>
 						<li><a href="/lwg/project/login">Login</a></li>
 						<li class="last"><a href="/lwg/project/registration">Registration</a></li>
 					<?php }?>
 				</ul>
-			</div>
 		</nav>
-		<br class="clearfix"/>
-			<div id="content">
-				<div class="box">
-					<?php include 'application/views/'.$content_view; ?>
-				</div>
-				<br class="clearfix" />
-			</div>
-			<br class="clearfix" />
-	</div>
-</body>
+		<?php include 'application/views/'.$content_view; ?>
 </html>

@@ -65,9 +65,9 @@
           top: -97%;
           left: -13%;">LWG</a>
       </div>
-   	<div class="row" style="    width: 80%;
-     max-width: auto; 
-    margin: 0 0 0 13%;">
+   	<div class="row" style="width: 80%;
+       max-width: auto; 
+       margin: 0 0 0 13%;">
 
 	   	<nav id="main-nav-wrap">
 				<ul class="main-navigation menu">
@@ -78,7 +78,7 @@
 					<li><a class="smoothscroll"  href="#faq" title="">KKK</a></li>
 					<?php if ($liitu) { ?>
 					   <li class="highlight with-sep" onclick ="showSubmenu()" style="margin: 0 10px; cursor: pointer;">
-                     <div  style="color: #05bca9; width: 100%">
+                     <div class="username">
                         <?php echo $_SESSION['fname'];?>
                      </div>
                   </li>
@@ -120,7 +120,7 @@
 	   			<h1>Otsid Personali?<br>Meie aitame Sind</h1>
 	   		</div>  
 
-            <a class="button stroke" style="background: #05bca9; color:#05bca9;" href="/lwg/test.php" title="">Kontakteeru kohe</a>
+            <a class="button stroke" href="/lwg/test.php" title="">Kontakteeru kohe</a>
    		</div>
    	</div>
 

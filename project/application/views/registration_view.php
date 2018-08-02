@@ -14,7 +14,7 @@
 	}
 </style>
 
-<body class="loginPage">
+<div class="loginPage">
 
 
 	<h3><i><font color='red'>
@@ -53,4 +53,4 @@
 					<input type="submit" align="right" class="btn btn-primary" value="Done">
 			</form>
 		</div>
-</body>	
+</div>	
