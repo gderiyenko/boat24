@@ -883,6 +883,8 @@ header .logo a {
 	top: 0;
 }
 .sticky .logo a {
+	top: -97%;
+    left: -13%;
 	width: 100px;
 	height: 71px;
 	background-size: 100px 80px;

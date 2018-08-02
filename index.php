@@ -6,7 +6,6 @@
    } else {
    	$liitu = false;
    }
-
 ?>
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
@@ -62,7 +61,9 @@
    ================================================== -->
    <header>
       <div class="logo">
-         <a href="#intro">LWG</a>
+         <a href="#intro" style="position: fixed;
+          top: -97%;
+          left: -13%;">LWG</a>
       </div>
    	<div class="row" style="    width: 80%;
      max-width: auto; 
@@ -536,11 +537,12 @@ Seega jääb teil rohkem aega oma põhitegevuseks.
    <footer>
 
    	<div class="footer-main">
-         <img src="images/logo.png" style="    width: 5%;
-          /* margin: 1% 0 9% 5%; */
+         <img src="images/logo.png" style="
+          width: 3%;
+          min-width: 50px;
           position: relative;
           display: inline-block;
-          bottom: 130px;"> 
+          top: -69px;"> 
    		<div class="row" style="display: inline-block; max-width: none;">  
 
 	      	<div class="col-four tab-full mob-full footer-info" style="padding: 0 0;">            
@@ -554,8 +556,7 @@ Seega jääb teil rohkem aega oma põhitegevuseks.
                      display:inline-block;">Live Ware Group</p>
 
 	            <p style="
-                     position: relative;
-                     bottom: 18px;">
+                     position: relative;">
 		        	Pikk 39-8<br>
             	Tallinn, Estonia<br>
 		        	info@lwg.ee &nbsp; +123-456-789
