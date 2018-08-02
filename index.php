@@ -88,7 +88,8 @@
                      </ul>
 					   
 					<?php } else { ?>
-						<li class="highlight with-sep"><a href="/lwg/project/registration" title="">Liitu</a></li>	
+                  <li class="highlight with-sep"><a href="/lwg/project/registration" title="">Liitu</a></li>   
+						<li class="highlight with-sep"><a href="/lwg/project/login" title="">Log in</a></li>	
 					<?php }?>
 					<!--
 				    <li class="highlight with-sep"><a href="rus.html" title=""><img class="flag" src="images/rus.png" alt="est"></a></li>
