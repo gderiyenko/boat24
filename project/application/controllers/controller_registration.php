@@ -30,11 +30,11 @@ class Controller_Registration extends Controller
 			header("Location: /lwg/project/registration");
 
 		} elseif($_POST['password']!=$_POST['password2']) {
-			$_SESSION['data']='PASSWORDS DO NOT WORK';
+			$_SESSION['data']='Passwords did not match';
 			header("Location: /lwg/project/registration");
 
 		} elseif($this->model->checklogin($_POST['email'],$_POST['password'])) {
-			$_SESSION['data']='A user with such a email is already registered';
+			$_SESSION['data']="A user with ".$_POST['email']." email is already registered";
 			header("Location: /lwg/project/registration");
 
 		} else {

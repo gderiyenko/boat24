@@ -9,8 +9,10 @@ class Model_Personal extends Model
 	}
 	
 	public function save_user_data($data) {
+		/*
 		$this->set_charset("utf8");
 		$res = $this->query("UPDATE  `users` SET `fname`='".$data["fname"]."',`lname`='".$data["lname"]."', `email`='".$data["email"]."', `date`= now() WHERE `password`='".$data["password"]."' AND `user_id`=".$data["id"]);
+		*/
 	}
 		
 }
