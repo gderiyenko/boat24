@@ -115,7 +115,7 @@
 	   			<h1>Otsid Personali?<br>Meie aitame Sind</h1>
 	   		</div>  
 
-            <a class="button stroke smoothscroll" style="background: #05bca9; color:#05bca9;" href="test.php" title="">Kontakteeru kohe</a>
+            <a class="button stroke" style="background: #05bca9; color:#05bca9;" href="/lwg/test.php" title="">Kontakteeru kohe</a>
    		</div>
    	</div>
 
@@ -532,10 +532,12 @@ Seega jääb teil rohkem aega oma põhitegevuseks.
    <footer>
 
    	<div class="footer-main">
-         <img src="images/logo.png" style="width: 5%;
-          margin: 1% 0 9% 5%;
-          display: inline-block;"> 
-   		<div class="row" style="display: inline-block;">  
+         <img src="images/logo.png" style="    width: 5%;
+          /* margin: 1% 0 9% 5%; */
+          position: relative;
+          display: inline-block;
+          bottom: 130px;"> 
+   		<div class="row" style="display: inline-block; max-width: none;">  
 
 	      	<div class="col-four tab-full mob-full footer-info" style="padding: 0 0;">            
 
