@@ -55,9 +55,9 @@
 						<li style="width: 32%"><a href="/lwg/project/personal">Personal</a></li>
 						<li style="width: 32%"><a href="/lwg/project/login/close">Logout</a></li>
 					<?php } else { ?>
-						<li class="first active"><a href="/lwg">Main page</a></li>
-						<li><a href="/lwg/project/login">Login</a></li>
-						<li class="last"><a href="/lwg/project/registration">Registration</a></li>
+						<li style="width: 32%"><a href="/lwg">Main page</a></li>
+						<li style="width: 32%"><a href="/lwg/project/login">Login</a></li>
+						<li style="width: 32%"><a href="/lwg/project/registration">Registration</a></li>
 					<?php }?>
 				</ul>
 		</nav>

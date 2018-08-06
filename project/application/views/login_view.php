@@ -1,7 +1,13 @@
+<?php 
+	$message = $_SESSION['msg'];
+	$_SESSION['msg'] = null;
+?>
+
 <style>
 /* unvisited link */
-a:link {
-    color: red;
+a, a:visited {
+    font-size: 16px;
+    color: #05bca9;
 }
 
 /* mouse over link */
@@ -20,8 +26,12 @@ input {
 
     <div class="modal-header" align="center">
     	<h2 style="color: #05bca9;">Login Form</h2>
-    </div>
-
+  
+	    <h3><i><font color='red'>
+			<?php if(!empty($message)) {
+				echo $message;
+			} ?></font> </i></h3>  
+	</div>
 	<div class="col-md-6 col-sm-9"  align="center" style="width: 100%;">
         <form class="form-horizontal" method="POST" action="" accept-charset="utf-8" >
 	 		<input type="text" class="form-control input-lg" value="" name="email" placeholder="Email">

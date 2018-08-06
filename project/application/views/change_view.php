@@ -37,9 +37,9 @@ input {
         <form method="POST" action="/lwg/project/change/save" accept-charset="utf-8">
 	 		<input type="password" class="form-control input-lg" value="" name="oldPassword" placeholder="Old password">
 	 		<br>
-	 		<input type="password" class="form-control input-lg" value="" name="newPassword" placeholder="New password">
+	 		<input type="password" class="form-control input-lg" name="newPassword" pattern=".{6,}" title="Six or more characters" placeholder="New password">
 	 		<br>
-	 		<input type="password" class="form-control input-lg" value="" name="newPasswordRepeat" placeholder="Repeat new password">
+	 		<input type="password" class="form-control input-lg" name="newPasswordRepeat" pattern=".{6,}" title="Six or more characters" placeholder="Repeat new password">
 	 		<br>
         	<div> 
 				<button type="submit" class="btn btn-primary" >Change</button>

@@ -23,8 +23,9 @@ class Controller_Login extends Controller
 				$_SESSION['lang']=$data['lang'];
 				
 				//$this->model->save_logs($_SESSION['user_id'],$_COOKIE["PHPSESSID"],$_SESSION['klass']);
+			} else {
+				$_SESSION['msg'] = "The user name or password is incorrect";
 			}
-		
 		}
 		
 		if((!empty($_SESSION['user_id'])))  header ("Location: /lwg");
