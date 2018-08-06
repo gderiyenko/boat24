@@ -73,7 +73,7 @@
    ================================================== -->
    <header class="sticky">
       <div class="logo">
-         <a href="#intro" style="position: fixed;
+         <a href="/lwg/#intro" style="position: fixed;
           top: -97%;
           left: -13%;">LWG</a>
       </div>
