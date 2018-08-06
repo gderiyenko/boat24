@@ -37,12 +37,13 @@
    <!-- favicons
 	================================================== -->
 	<link rel="icon" type="image/png" href="favicon.png">
-	<style type="text/css">
-	body,td,th {
-	font-size: 1em;
-}
-    </style>
+	
 </head>
+   <style type="text/css">
+      body,td,th {
+         font-size: 1em;
+      }
+   </style>
 <script type="text/javascript">
    function showSubmenu() {
       //alert(document.getElementById('submenu').style.display);

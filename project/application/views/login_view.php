@@ -5,13 +5,13 @@
 
 <style>
 /* unvisited link */
-a, a:visited {
+form a, form a:visited {
     font-size: 16px;
     color: #05bca9;
 }
 
 /* mouse over link */
-a:hover {
+form a:hover {
     color: blue;
 }
 .col-sm-9 {
