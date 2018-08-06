@@ -79,7 +79,7 @@
           <?php if ($liitu) { ?>
              <li class="highlight with-sep" onclick ="showSubmenu()" style="margin: 0 10px; cursor: pointer;">
                      <div class="username">
-                        <?php echo $_SESSION['fname'];?>
+                        <?php echo $_SESSION['fname'] . " " . $_SESSION['lname'];?>
                      </div>
                   </li>
                <ul id="submenu" class="submenu" style="display:none;margin: 66px 0 0 0;position:fixed;top:0;right:0;left:auto;padding: 0 1% 0 0;">
