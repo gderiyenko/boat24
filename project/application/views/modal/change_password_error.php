@@ -33,9 +33,9 @@
 
 <div id="overlay"></div>
 <div id="popup">
-	<p>Your password was changed successful!</p>
+	<p>Ops, something went wrong. Try again!</p>
 </div>
 
 <script>
-	setTimeout("location.href = '/lwg';",1500);
+	setTimeout("location.href = '/lwg/project/change';",1500);
 </script>

@@ -2,9 +2,13 @@
 session_start();
 
 $popupMessageSuccess = false;
-if ($_SESSION['message'] == "OK") {
+if ($_SESSION['msg'] == "OK") {
 	$popupMessageSuccess = true;
-	$_SESSION['message'] = null;
+	$_SESSION['msg'] = null;
+}
+if ($_SESSION['msg'] == "ERROR") {
+	$popupMessageError = true;
+	$_SESSION['msg'] = null;
 }
 
 ?>
@@ -48,8 +52,15 @@ input {
 
 			
 	</div>
+
+	<!-- success popup -->
 	<?php if ($popupMessageSuccess){
 		require_once 'modal/change_password_success.php';
+	} ?>
+
+	<!-- something went wrong popup -->
+	<?php if ($popupMessageError){
+		require_once 'modal/change_password_error.php';
 	} ?>
 	
 </div>

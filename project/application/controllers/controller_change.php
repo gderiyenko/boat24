@@ -24,11 +24,12 @@ class Controller_Change extends Controller
 		if ($_POST['newPassword'] == $_POST['newPasswordRepeat']) {
 			$success = $this->model->save_user_data($_POST['oldPassword'], $_POST['newPassword'], $_SESSION['user_id']);
 			if ($success) {
-				$_SESSION['message'] = "OK";
+				$_SESSION['msg'] = "OK";
 				header ("Location: /lwg/project/change");
 				die();
 			}
 		}
+		$_SESSION['msg'] = "ERROR";
 		$this->view->generate('change_view.php', 'template_view.php', $data);
 	}
 }

@@ -1,12 +1,11 @@
 <?php
 
-  session_start();
-  if (!empty($_SESSION['check'])){
+   session_start();
+   if (!empty($_SESSION['check'])){
     $liitu = true;
-  } else {
+   } else {
     $liitu = false;
-  }
-
+   }
 ?>
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
@@ -54,16 +53,21 @@
       }
    }
 </script>
-
 <body id="top">
+
+
 
   <!-- header 
    ================================================== -->
    <header>
       <div class="logo">
-         <a href="#intro">LWG</a>
+         <a href="#intro" style="position: fixed;
+          top: -97%;
+          left: -13%;">LWG</a>
       </div>
-    <div class="row">
+    <div class="row" style="width: 80%;
+       max-width: auto; 
+       margin: 0 0 0 16%;">
 
       <nav id="main-nav-wrap">
         <ul class="main-navigation menu">
@@ -71,19 +75,22 @@
           <li><a href="/lwg/#process" title="">Meist</a></li>
           <li><a href="/lwg/#features" title="">Teenused</a></li>
           <li><a href="/lwg/#pricing" title="">Pricing</a></li>
+          <li><a href="/lwg/#faq" title="">KKK</a></li>
           <?php if ($liitu) { ?>
              <li class="highlight with-sep" onclick ="showSubmenu()" style="margin: 0 10px; cursor: pointer;">
-                     <div  style="color: #05bca9; width: 100%">
+                     <div class="username">
                         <?php echo $_SESSION['fname'];?>
                      </div>
-               <ul id="submenu" class="submenu" style="display: none;">
-                         <li><a href="/lwg/project/personal">Personal Data</a></li>
-                         <li><a href="/lwg/project/change">Change Password</a></li>
-                         <li><a href="/lwg/project/login/close">Log Out</a></li>
+                  </li>
+               <ul id="submenu" class="submenu" style="display:none;margin: 66px 0 0 0;position:fixed;top:0;right:0;left:auto;padding: 0 1% 0 0;">
+                         <li style="height: auto;"><a href="/lwg/project/personal">Personal Data</a></li>
+                         <li style="height: auto;"><a href="/lwg/project/change">Change Password</a></li>
+                         <li style="height: auto;"><a href="/lwg/project/login/close">Log Out</a></li>
                      </ul>
-             </li>
+             
           <?php } else { ?>
-            <li class="highlight with-sep"><a href="/lwg/project/registration" title="">Liitu</a></li>  
+                  <li class="highlight with-sep"><a href="/lwg/project/registration" title="">Liitu</a></li>   
+            <li class="highlight with-sep"><a href="/lwg/project/login" title="">Log in</a></li>  
           <?php }?>
           <!--
             <li class="highlight with-sep"><a href="rus.html" title=""><img class="flag" src="images/rus.png" alt="est"></a></li>
@@ -218,22 +225,26 @@
    <footer>
 
     <div class="footer-main">
+         <img src="images/logo.png" style="
+          width: 3%;
+          min-width: 50px;
+          position: relative;
+          display: inline-block;
+          top: -69px;"> 
+      <div class="row" style="display: inline-block; max-width: none;">  
 
-      <div class="row">  
+          <div class="col-four tab-full mob-full footer-info" style="padding: 0 0;">            
 
-          <div class="col-four tab-full mob-full footer-info">            
-
-              <!--<div class="footer-logo"></div> -->
-                  <img src="images/logo.png" style="width: 70px;display:inline-block">
+              <!--<div class="footer-logo"></div>-->
+                  
+                  <span class='icon'></span>
                   <p style="
                      position: relative;
-                     bottom: 18px;
                      color: white;
                      display:inline-block;">Live Ware Group</p>
 
               <p style="
-                     position: relative;
-                     bottom: 18px;">
+                     position: relative;">
               Pikk 39-8<br>
               Tallinn, Estonia<br>
               info@lwg.ee &nbsp; +123-456-789
@@ -271,9 +282,9 @@
 
           <div class="col-four tab-1-3 mob-full footer-subscribe">
             <h4>Kontakteeru täna</h4>
-            <div class="action">
-                  <a class="button large round" style="background: #434343; pointer-events: none; cursor: default;"  href="test.php" >Kontakteeru kohe</a>
-               </div>        
+               <ul>
+               <li><a href="test.php">Kontakteeru kohe</a></li>
+               </ul>
           </div> <!-- /subscribe -->         
 
         </div> <!-- /row -->
@@ -301,7 +312,7 @@
 
       </div>
 
-   </footer> 
+   </footer>
 
    <div id="preloader"> 
       <div id="loader"></div>
