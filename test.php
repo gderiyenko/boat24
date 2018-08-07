@@ -3,6 +3,8 @@
    session_start();
    if (!empty($_SESSION['check'])){
     $liitu = true;
+    $formName = $_SESSION['fname'] . " " .  $_SESSION['lname'];
+    $formEmail = $_SESSION['email'];
    } else {
     $liitu = false;
    }
@@ -118,39 +120,34 @@
           <!-- <div class='video-link'> 
             <a href="#video-popup"><img src="images/play-button.png" alt=""></a>
           </div>-->
+          <h3>Contact Form</h3>
 
-        <h3>Contact Form</h3>
 
-
-        <div class="container" style="left: 0;">  
-  <form id="contact" action="contact_mail.php" method="post">
-    <h3>Quick Contact</h3>
-    <h4>Contact us today, and get reply with in 24 hours!</h4>
-    <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" name="name" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Email Address" type="email" name="email" tabindex="2" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Phone Number" type="tel" name="phone" tabindex="3" required>
-    </fieldset>
-
-    <fieldset>
-      <textarea placeholder="Type your Message Here...." tabindex="5" name="message" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" name="post_data" data-submit="...Sending">Submit</button>
-      
-    </fieldset>
-  </form>
- 
-  
-</div> 
-        
-      </div>          
-    </div> 
-     </div>
+          <div class="container" style="left: 0;">  
+            <form id="contact" action="/lwg/project/main/subscription" method="post">
+              <h3>Quick Contact</h3>
+              <h4>Contact us today, and get reply with in 24 hours!</h4>
+              <fieldset>
+                <input placeholder="Your name" type="text" tabindex="1" name="name" value="<?php echo $formName; ?>" required autofocus>
+              </fieldset>
+              <fieldset>
+                <input placeholder="Your Email Address" type="email" name="email" value="<?php echo $formEmail; ?>" tabindex="2" required>
+              </fieldset>
+              <fieldset>
+                <input placeholder="Your Phone Number" type="tel" name="phone" tabindex="3" required>
+              </fieldset>
+              <fieldset>
+                <textarea placeholder="Type your Message Here...." tabindex="5" name="message" required></textarea>
+              </fieldset>
+              <fieldset>
+                <button name="submit" type="submit" id="contact-submit" name="post_data" data-submit="...Sending">Submit</button>
+                
+              </fieldset>
+            </form>
+          </div> 
+        </div>          
+      </div> 
+    </div>
 
     <!-- Modal Popup
      ========================================================= -->

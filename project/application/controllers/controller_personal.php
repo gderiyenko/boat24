@@ -3,14 +3,12 @@
 class Controller_Personal extends Controller
 {
 	
-	function __construct()
-	{
+	function __construct() {
 		$this->model = new Model_Personal(HOST, LOGIN, PASSWORD, DB);
 		$this->view = new View();
 	}
 	
-	function action_index()
-	{
+	function action_index() {
 		if (!empty($_SESSION['user_id'])) 
 		{
 			$data = $this->model->get_user_data($_SESSION['user_id']);
@@ -21,8 +19,7 @@ class Controller_Personal extends Controller
 		}
 	}
 
-	function action_downloadCV()
-	{
+	function action_downloadCV() {
 		$data = $this->model->get_user_data($_SESSION['user_id']);
 		$my_file = "/uploads/". $data['filename_CV'];
 		$fullPath = dirname(__FILE__) . '/../../../../..' . $my_file;
