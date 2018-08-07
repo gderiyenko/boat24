@@ -8,7 +8,7 @@
 
 #popup {
   width:60%;
-  z-index: 10px;
+  z-index: 10;
   background:rgba(255,255,255,0.85);
   border-radius: 8px;
   margin: 20% 20%;

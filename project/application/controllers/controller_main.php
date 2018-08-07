@@ -1,5 +1,5 @@
 <?php
-$_SESSION['check']=false;
+
 class Controller_Main extends Controller
 {
 
@@ -22,8 +22,9 @@ class Controller_Main extends Controller
 		$this->send_email($_POST);
 		// add info about subscription to database
 		$this->model->start_new_subscription($_POST);
-		// redirect to main
-		header('Location: /lwg/project/main/subscription');
+		// redirect to contact + popup
+		$_SESSION['msg'] = "OK";
+		header('Location: /lwg/test.php');
 	}
 
 	function send_email($emailInfo) { // send email function

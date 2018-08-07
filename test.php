@@ -1,13 +1,19 @@
 <?php
 
-   session_start();
-   if (!empty($_SESSION['check'])){
+  session_start();
+  if (!empty($_SESSION['check'])){
     $liitu = true;
     $formName = $_SESSION['fname'] . " " .  $_SESSION['lname'];
     $formEmail = $_SESSION['email'];
-   } else {
+  } else {
     $liitu = false;
-   }
+  }
+  if ($_SESSION['msg'] == "OK") {
+    $addPopup = true;
+    $_SESSION['msg'] = null;
+  } else {
+    $addPopup = false;
+  }
 ?>
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
@@ -55,8 +61,14 @@
       }
    }
 </script>
+<?php
+  if ($addPopup) {
+    require_once 'contact_popup.php';
+  } 
+?>
 <body id="top">
 
+    
 
 
   <!-- header 
