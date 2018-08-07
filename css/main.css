@@ -450,7 +450,7 @@ ul.submenu > li {
 ul.submenu > li > a {
     display: block;
     padding: 10px;
-    color: white;
+    /*color: white;*/
     text-decoration: none;
 }
 ul.submenu > li > a:hover {

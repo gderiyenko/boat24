@@ -68,7 +68,8 @@
       </div>
    	<div class="row" style="width: 80%;
        max-width: auto; 
-       margin: 0 0 0 16%;">
+       margin: 0 0 0 16%;
+       position: static;">
 
 	   	<nav id="main-nav-wrap">
 				<ul class="main-navigation menu">
