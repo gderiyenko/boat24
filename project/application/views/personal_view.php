@@ -1,6 +1,14 @@
+<style type="text/css">
+	.row {
+		margin: 0;
+		text-align: left;
+	}
+</style>
 <div class="loginPage">
-   <div class="modal-header" align="center"> <h2 style="color: #05bca9;">Parsonal datas</h2></div>
-		<div class="col-md-6 col-sm-9" align="center"  style="width: 100%;">
+   <div class="modal-header" align="center"> <h2 style="color: #05bca9; text-align: left; padding-left: 47%;">Parsonal datas</h2></div>
+		<div class="col-md-6 col-sm-9" align="center"  style="width: 100%;padding-left: 47%;
+	    text-align: left;
+	    width: 100%;">
 		<div class="row">
 	  		<h3 style="color: white;display:inline;" nowrap>Name: </h3><h4 style="color: #05bca9;display:inline;"><?php echo $data['fname'];?></h4>
 	  	</div>
