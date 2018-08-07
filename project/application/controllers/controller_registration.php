@@ -35,24 +35,21 @@ class Controller_Registration extends Controller
 			header("Location: /lwg/project/registration");
 
 		} else {
-			//check extension
-			$allowed =  array('pdf', 'docx', 'docm', 'docb');
-			$filename = $_FILES['file']['name'];
-			$ext = pathinfo($filename, PATHINFO_EXTENSION);
-			if(!in_array($ext,$allowed) ) {
-			    $_SESSION['data']='CV file extension have an invalid format';
-				header("Location: /lwg/project/registration");
-			}
-			//upload file 
-			$t = "/www/apache/domains/www.boat24.ee/uploads/";
-			clearstatcache();
-			$filenameCV = $this->generate_CV_name($_POST['fname'], $_POST['lname'], $ext);
-			$targetfolder = $t . $filenameCV;
-			if(move_uploaded_file($_FILES['file']['tmp_name'], $targetfolder)) {
-				$fullPath = dirname(__FILE__) . '/../../../../../uploads/' . $filenameCV;
-				chmod($fullPath, 0777);
+			if ($_FILES['file']['size'] > 0) {
+				$filename = $_FILES['file']['name'];
+				//upload file 
+				$t = "/www/apache/domains/www.boat24.ee/uploads/";
+				clearstatcache();
+				$filenameCV = $this->generate_CV_name($_POST['fname'], $_POST['lname'], $ext);
+				$targetfolder = $t . $filenameCV;
+				if(move_uploaded_file($_FILES['file']['tmp_name'], $targetfolder)) {
+					$fullPath = dirname(__FILE__) . '/../../../../../uploads/' . $filenameCV;
+					chmod($fullPath, 0777);
+				} else {
+					echo "Problem uploading file";
+				}
 			} else {
-				echo "Problem uploading file";
+				$filenameCV = null;
 			}
 			// add to database
 			$data = $this->model->registration_user($_POST['fname'],$_POST['lname'],$_POST['lang'],$_POST['email'],$_POST['password'], $filenameCV);

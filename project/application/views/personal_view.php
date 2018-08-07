@@ -20,7 +20,12 @@
 	  	</div>
 	  	<div class="row">
 	  		<h3 style="color: white;display:inline;" nowrap>Your CV file: </h3>
-	  		<a href="/lwg/project/personal/downloadCV">link</a>
+	  		<?php 
+	  		if (!empty($data['filename_CV'])) { 
+	  			echo '<a href="/lwg/project/personal/downloadCV">link</a>';
+	  		} else {
+	  			echo '<strong><p style="display: inline; font-size: 14px; color: #98999a;">Missing</p></strong>';
+	  		}?>
 	  	</div>
     </div>
 </div>
