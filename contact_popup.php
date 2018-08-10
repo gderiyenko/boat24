@@ -45,12 +45,25 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+#popup .button-holder a {
+  font-size: 14px;
+  color: #007AFF;
+  text-decoration: none;
+  line-height:45px;
+  font-weight:bold;
+  display: block;
+  border-top: 1px solid #BABABA;
+}
 </style>
 
 <div id="overlay"></div>
 <div id="popup">
 	<span class="close">&times;</span>
 	<p>We will contact you shortly.</p>
+  <div class="button-holder one-button">
+    <a href="/lwg">OK</a>
+  </div>
 </div>
 
 <script>
