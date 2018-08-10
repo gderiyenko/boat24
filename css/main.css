@@ -945,7 +945,8 @@ a.menu-toggle {
 	letter-spacing: 1.5px;
 	position: absolute;
 	top: 0;
-	right: 30px;
+	right: 1%;
+    padding-right: 67px;
 }
 .main-navigation2 {
 	min-height: 660px;
