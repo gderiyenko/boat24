@@ -18,9 +18,9 @@
 
 
 	<h3><i><font color='red'>
-		<?php if(!empty($_SESSION['data'])) {
-			echo $_SESSION['data'];
-			$_SESSION['data'] = null;
+		<?php if(!empty($data)) {
+			echo $data;
+			$data = null;
 		} ?></font> </i></h3>  
 		
 	<div class="modal-header" align="center"> 

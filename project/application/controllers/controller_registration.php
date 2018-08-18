@@ -17,6 +17,37 @@ class Controller_Registration extends Controller
 	function generate_CV_name($fname, $lname, $ext) {
 		return "$fname"."_"."$lname"."_". md5( time( ) ) . ".$ext";
 	}
+
+	function check_file_extension($filename) { // extension validation
+		$extensions = array( // available extensions
+			".docx",
+			".doc",
+			".pdf"
+		);
+
+		$availableExtension = false;
+		foreach ($extensions as $key => $extension) {
+			$extensionCheck = true;
+			for($i=1; $i<=strlen($extension); ++$i) {
+				if ($extension[strlen($extension) - $i] != $filename[strlen($filename )- $i]) {
+					$extensionCheck = false;
+					break;
+				}
+			}
+			if ($extensionCheck) {
+				$availableExtension = true;
+				break;
+			}
+		}
+
+		if (!$availableExtension) {
+			$data ="You tried to upload unavailable format of file.";
+			$this->view->generate('registration_view.php', 'template_view.php', $data);
+			die();
+		} else {
+			return true;
+		}
+	}
 	
 	function action_check() {
 		
@@ -35,8 +66,11 @@ class Controller_Registration extends Controller
 			header("Location: /lwg/project/registration");
 
 		} else {
-			if ($_FILES['file']['size'] > 0) {
-				$filename = $_FILES['file']['name'];
+			if ( $_FILES['file']['size'] > 0 && ($_FILES["file"]["size"] < 200000) ) { // if file was uploaded
+				
+				$filename = $_FILES['file']['name']; echo ($_FILES['file']['name']) . "\n"; 
+				$this->check_file_extension($filename);
+
 				//upload file 
 				$t = "/www/apache/domains/www.boat24.ee/uploads/";
 				clearstatcache();

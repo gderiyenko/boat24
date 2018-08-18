@@ -55,6 +55,37 @@ class Controller_Personal extends Controller
 		return "$fname"."_"."$lname"."_". md5( time( ) ) . ".$ext";
 	}
 
+	function check_file_extension($filename) { // extension validation
+		$extensions = array( // available extensions
+			".docx",
+			".doc",
+			".pdf"
+		);
+
+		$availableExtension = false;
+		foreach ($extensions as $key => $extension) {
+			$extensionCheck = true;
+			for($i=1; $i<=strlen($extension); ++$i) {
+				if ($extension[strlen($extension) - $i] != $filename[strlen($filename )- $i]) {
+					$extensionCheck = false;
+					break;
+				}
+			}
+			if ($extensionCheck) {
+				$availableExtension = true;
+				break;
+			}
+		}
+
+		if (!$availableExtension) {
+			$_SESSION['data']="Wrong format of the file.";
+			header("Location: /lwg/project/personal/edit");
+			die();
+		} else {
+			return true;
+		}
+	}
+
 	function action_save() {
 		$data = $this->model->get_user_data($_SESSION['user_id']); // get old data 
 
@@ -76,9 +107,12 @@ class Controller_Personal extends Controller
 
 		} else { // success
 
-			if ($_FILES['file']['size'] > 0) { // if file was uploaded
-				$filename = $_FILES['file']['name'];
-				//upload file 
+			if ( $_FILES['file']['size'] > 0 && ($_FILES["file"]["size"] < 200000) ) { // if file was uploaded
+				
+				$filename = $_FILES['file']['name']; echo ($_FILES['file']['name']) . "\n"; 
+				$this->check_file_extension($filename);
+
+				// upload file
 				$t = "/www/apache/domains/www.boat24.ee/uploads/";
 				clearstatcache();
 				$filenameCV = $this->generate_CV_name($_POST['fname'], $_POST['lname'], $ext);
@@ -123,7 +157,7 @@ class Controller_Personal extends Controller
 				$_SESSION['user_id']=$data['user_id'];
 				$_SESSION['lang']=$data['lang'];
 			}
-			header ("Location: /lwg");
+			header ("Location: /lwg/project/personal");
 		}
 	}
 }

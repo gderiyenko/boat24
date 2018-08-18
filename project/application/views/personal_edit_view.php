@@ -2,7 +2,6 @@
 	$valName = $data['fname'];
 	$valSurname = $data['lname'];
 	$valEmail = $data['email'];
-
 ?>
 
 <style>
@@ -28,7 +27,7 @@
 		<?php if(!empty($_SESSION['data'])) {
 			echo $_SESSION['data'];
 			$_SESSION['data'] = null;
-		} ?></font> </i></h3>  
+		} ?></font> </i></h3>
 		
 	<div class="modal-header" align="center"> 
 		<h2 style="color: #05bca9;">Edit Form</h2> 
