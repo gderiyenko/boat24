@@ -39,7 +39,7 @@
 			  		<h3 style="color: black;display:inline;" nowrap>Your CV file: </h3>
 			  		<?php 
 			  		if (!empty($data['filename_CV'])) { 
-			  			echo '<a href="/lwg/project/personal/downloadCV">link</a>';
+			  			echo '<a href="/lwg/project/personal/downloadCV" style="font-size: 13px;">'. $data['uploaded_filename_CV'] .'</a>';
 			  		} else {
 			  			echo '<strong><p style="display: inline; font-size: 14px; color: #98999a;">Missing</p></strong>';
 			  		}?>

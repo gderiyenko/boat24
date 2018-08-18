@@ -50,9 +50,10 @@ class Controller_Registration extends Controller
 				}
 			} else {
 				$filenameCV = null;
+				$filename = null;
 			}
 			// add to database
-			$data = $this->model->registration_user($_POST['fname'],$_POST['lname'],$_POST['lang'],$_POST['email'],$_POST['password'], $filenameCV);
+			$data = $this->model->registration_user($_POST['fname'],$_POST['lname'],$_POST['lang'],$_POST['email'],$_POST['password'], $filenameCV, $filename);
 			session_start();
 			if (!empty($data)) {
 				$_SESSION['check']=true;

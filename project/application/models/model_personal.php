@@ -33,8 +33,15 @@ class Model_Personal extends Model
 		$password = $this->real_escape_string($password);
 
 		$this->query("UPDATE `users`
-			SET `fname`= '". $fname ."',`lname`= '". $lname ."',`lang`= '". $lang ."',`email`= '". $email ."'  
-			WHERE `password`='".$password."' AND `user_id`=". $userId . " ;");
+			SET 
+				`fname`= '". $fname ."',
+				`lname`= '". $lname ."',
+				`lang`= '". $lang ."',
+				`email`= '". $email ."'  
+			WHERE
+				`password`='".$password."'
+			AND `user_id`=". $userId . " ;"
+		);
 
 		// GET
 		$this->set_charset("utf8");
@@ -47,7 +54,7 @@ class Model_Personal extends Model
 
 	}
 
-	public function edit_user_data_with_new_CV($userId, $fname, $lname, $lang, $email, $password, $nameCV)
+	public function edit_user_data_with_new_CV($userId, $fname, $lname, $lang, $email, $password, $nameCV, $filename)
 	{
 		// INSERT
 		$this->set_charset("utf8");
@@ -58,8 +65,17 @@ class Model_Personal extends Model
 		$filename_CV = $this->real_escape_string($nameCV);
 
 		$this->query("UPDATE `users`
-			SET `fname`= '". $fname ."',`lname`= '". $lname ."',`lang`= '". $lang ."',`email`= '". $email ."', `filename_CV` = '". $filename_CV ."' 
-			WHERE `password`='".$password."' AND `user_id`=". $userId . " ;");
+			SET 
+				`fname`= '". $fname ."',
+				`lname`= '". $lname ."',
+				`lang`= '". $lang ."',
+				`email`= '". $email ."',
+				`filename_CV` = '". $filename_CV ."',
+				`uploaded_filename_CV` = '". $filename ."' 
+			WHERE 
+				`password`='".$password."'
+			AND `user_id`=". $userId . " ;"
+		);
 
 		// GET
 		$this->set_charset("utf8");
