@@ -133,11 +133,9 @@
           <!-- <div class='video-link'> 
             <a href="#video-popup"><img src="images/play-button.png" alt=""></a>
           </div>-->
-          <h3>Contact Form</h3>
-
 
           <div class="container" style="left: 0;">  
-            <form id="contact" action="/lwg/project/main/subscription" method="post">
+            <form id="contact" action="/lwg/project/main/subscription" method="post" style="padding: 43px 20px 0 20px;">
               <h3>Quick Contact</h3>
               <h4>Contact us today, and get reply with in 24 hours!</h4>
               <fieldset>
@@ -235,26 +233,21 @@
    <footer>
 
     <div class="footer-main">
-         <img src="images/logo.png" style="
-          width: 3%;
-          min-width: 50px;
-          position: relative;
-          display: inline-block;
-          top: -69px;"> 
-      <div class="row" style="display: inline-block; max-width: none;">  
+         
+      <div class="row" style="">  
 
           <div class="col-four tab-full mob-full footer-info" style="padding: 0 0;">            
 
               <!--<div class="footer-logo"></div>-->
                   
-                  <span class='icon'></span>
-                  <p style="
-                     position: relative;
-                     color: white;
-                     display:inline-block;">Live Ware Group</p>
+            <img src="/lwg/images/footer-logo.JPG" style="
+              width: 48%;
+              min-width: 50px;
+              display: inline-block;"> 
 
               <p style="
-                     position: relative;">
+                     position: relative;
+                     padding-left: 19%;">
               Pikk 39-8<br>
               Tallinn, Estonia<br>
               info@lwg.ee &nbsp; +123-456-789
@@ -323,7 +316,7 @@
       </div>
 
    </footer>
-
+   
    <div id="preloader"> 
       <div id="loader"></div>
    </div> 
