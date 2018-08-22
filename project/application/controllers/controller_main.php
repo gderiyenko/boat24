@@ -28,10 +28,52 @@ class Controller_Main extends Controller
 	}
 
 	function send_email($emailInfo) { // send email function
+		$to = EMAIL_ADDRESS;
+		$subject = "New Subscription";
+
 		$name = htmlspecialchars($emailInfo['name']);
+		$email = htmlspecialchars($emailInfo['email']);
+		$phone = htmlspecialchars($emailInfo['phone']);
+		$msg = htmlspecialchars($emailInfo['message']);
+
+		$message = "
+		<html>
+		<head>
+			<title>$email</title>
+		</head>
+		<body>
+			<table>
+				<tr>
+					<th>Name: $name</th>
+				</tr>
+				<tr>
+					<th>Email: $email</th>
+				</tr>
+				<tr>
+					<td>Phone: $phone</td>
+				</tr>
+				<tr>
+					<td>$msg</td>
+				</tr>
+			</table>
+		</body>
+		</html>
+		";
+
+		// Always set content-type when sending HTML email
+		$headers = "MIME-Version: 1.0" . "\r\n";
+		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+		// More headers
+		//$headers .= 'From: <webmaster@example.com>' . "\r\n";
+		//$headers .= 'Cc: myboss@example.com' . "\r\n";
+
+		mail($to,$subject,$message,$headers);
+		/*$name = htmlspecialchars($emailInfo['name']);
 		$email = htmlspecialchars($emailInfo['email']);
 		$phone = htmlspecialchars($emailInfo['phone']);
 		$message = htmlspecialchars($emailInfo['message']);
 		return mail (EMAIL_ADDRESS, $email, "Name: ".$name."\r\n"."Email: ".$email."\r\n"."Phone: ".$phone."\r\n".$message);
+		*/
 	}
 }
