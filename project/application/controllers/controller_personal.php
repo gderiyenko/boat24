@@ -97,7 +97,7 @@ class Controller_Personal extends Controller
 			$_SESSION['data']='Fill in all the fields of the registration form';
 			header("Location: /lwg/project/personal/edit");
 
-		} elseif($_POST['password']!=$data['password']) { // wrong password
+		} elseif(sha1($_POST['password'])!=$data['password']) { // wrong password
 			$_SESSION['data']='Password did not match';
 			header("Location: /lwg/project/personal/edit");
 
@@ -113,7 +113,7 @@ class Controller_Personal extends Controller
 				$this->check_file_extension($filename);
 
 				// upload file
-				$t = "/www/apache/domains/www.boat24.ee/uploads/";
+				$t = UPLOADS;
 				clearstatcache();
 				$filenameCV = $this->generate_CV_name($_POST['fname'], $_POST['lname'], $ext);
 				$targetfolder = $t . $filenameCV;
@@ -136,7 +136,7 @@ class Controller_Personal extends Controller
 					$_POST['lname'],
 					$_POST['lang'],
 					$_POST['email'],
-					$_POST['password']);
+					sha1($_POST['password']));
 			} else {
 				$data = $this->model->edit_user_data_with_new_CV(
 					$data['user_id'],
@@ -144,7 +144,7 @@ class Controller_Personal extends Controller
 					$_POST['lname'],
 					$_POST['lang'],
 					$_POST['email'],
-					$_POST['password'],
+					sha1($_POST['password']),
 					$filenameCV,
 					$filename);
 			}

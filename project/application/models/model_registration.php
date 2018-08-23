@@ -25,7 +25,7 @@ class Model_Registration extends Model
 	}
 	
 
-	public function checklogin($email,$password)
+	public function checklogin($email)
 	{
 		$this->set_charset("utf8");
 		$result = $this->query("SELECT `user_id` FROM `users` WHERE  `email`='$email'");

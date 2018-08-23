@@ -1,6 +1,6 @@
 <?php
 define('ROOT_DIR',dirname(dirname(__FILE__)));
-define('ROOT','reg.loc');
+define('UPLOADS','/www/apache/domains/www.boat24.ee/uploads/');
 define('HOST', "localhost");
 define('LOGIN', 'vhost1384s1');
 define('PASSWORD', 'S5WS7o7m');

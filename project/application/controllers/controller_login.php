@@ -11,7 +11,7 @@ class Controller_Login extends Controller
 	function action_index() {
 		if((!empty($_POST['email']))&&(!empty($_POST['password']))) {
 
-			$data = $this->model->login_user($_POST['email'],$_POST['password']);
+			$data = $this->model->login_user($_POST['email'],sha1($_POST['password']));
 			
 			if (!empty($data)) {
 				$_SESSION['check']=true;

@@ -19,7 +19,7 @@ class Controller_Change extends Controller
 	
 	function action_save() {
 		if ($_POST['newPassword'] == $_POST['newPasswordRepeat']) {
-			$success = $this->model->save_user_data($_POST['oldPassword'], $_POST['newPassword'], $_SESSION['user_id']);
+			$success = $this->model->save_user_data(sha1($_POST['oldPassword']), sha1($_POST['newPassword']), $_SESSION['user_id']);
 			if ($success) {
 				$_SESSION['msg'] = "OK";
 				header ("Location: /lwg/project/change");

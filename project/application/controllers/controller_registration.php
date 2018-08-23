@@ -61,18 +61,18 @@ class Controller_Registration extends Controller
 			$_SESSION['data']='Passwords did not match';
 			header("Location: /lwg/project/registration");
 
-		} elseif($this->model->checklogin($_POST['email'],$_POST['password'])) {
+		} elseif($this->model->checklogin($_POST['email'])) {
 			$_SESSION['data']="A user with ".$_POST['email']." email is already registered";
 			header("Location: /lwg/project/registration");
 
 		} else {
 			if ( $_FILES['file']['size'] > 0 && ($_FILES["file"]["size"] < 200000) ) { // if file was uploaded
 				
-				$filename = $_FILES['file']['name']; echo ($_FILES['file']['name']) . "\n"; 
+				$filename = $_FILES['file']['name'];
 				$this->check_file_extension($filename);
 
 				//upload file 
-				$t = "/www/apache/domains/www.boat24.ee/uploads/";
+				$t = UPLOADS;
 				clearstatcache();
 				$filenameCV = $this->generate_CV_name($_POST['fname'], $_POST['lname'], $ext);
 				$targetfolder = $t . $filenameCV;
@@ -87,7 +87,7 @@ class Controller_Registration extends Controller
 				$filename = null;
 			}
 			// add to database
-			$data = $this->model->registration_user($_POST['fname'],$_POST['lname'],$_POST['lang'],$_POST['email'],$_POST['password'], $filenameCV, $filename);
+			$data = $this->model->registration_user($_POST['fname'],$_POST['lname'],$_POST['lang'],$_POST['email'],sha1($_POST['password']), $filenameCV, $filename);
 			session_start();
 			if (!empty($data)) {
 				$_SESSION['check']=true;
