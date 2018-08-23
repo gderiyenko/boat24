@@ -13,15 +13,6 @@ if ($_SESSION['msg'] == "ERROR") {
 
 ?>
 <style>
-/* unvisited link */
-a:link {
-    color: red;
-}
-
-/* mouse over link */
-a:hover {
-    color: blue;
-}
 .col-sm-9 {
     width: 100%;
     padding: 0 40%;
